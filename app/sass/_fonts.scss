@@ -1,6 +1,9 @@
 @import "_mixins/font-face";
+@import "../fonts/fontello/css/fontello.css";
 
 @include font-face(Roboto, "../fonts/RobotoRegular/RobotoRegular", null, normal, ttf eot woff2 woff svg);
 @include font-face(RobotoBold, "../fonts/RobotoBold/RobotoBold", 700, normal, ttf eot woff2 woff svg);
 @include font-face(RobotoItalic, "../fonts/RobotoItalic/RobotoItalic", null, italic, ttf eot woff2 woff svg);
 @include font-face(RobotoBoldItalic, "../fonts/RobotoBoldItalic/RobotoBoldItalic", 700, italic, ttf eot woff2 woff svg);
+
+// @include font-face(FontAwesome, "../fonts/FontAwesome/FontAwesome", null, null, ttf eot woff2 woff svg);

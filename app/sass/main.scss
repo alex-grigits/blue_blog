@@ -1,56 +1,90 @@
+@import "../libs/normalize-css/normalize";
 @import "fonts";
 @import "libs";
 @import "vars";
-/*
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
 
-*:-moz-placeholder
-	color: #666
-	opacity: 1
+/* Reset defaul styles */
 
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-*/
-* {
-	box-sizing: border-box;
-	transition: all .3s ease;
-}
-
-html, body {
-	height: 100%;
-}
-body {
-	font-size: 16px;
-	min-width: 320px;
-	position: relative;
-	padding-top: 11px;
-	line-height: 1.75;
-	color: $light-font-color;
-	font-family: $default-font;
-	background-color: $body-color;
-	overflow-x: hidden;
+/* Placeholders */
+*::-webkit-input-placeholder {
+	color: #5B6062;;
 	opacity: 1;
 }
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
+*:-moz-placeholder {
+	color: #5B6062;;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #5B6062;;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #5B6062;;
+    opacity: 1;
+}
+/* /Placeholder */
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    //color: $light-font-color;
+    text-decoration: none;
 }
 
-@import "layout";
 
-@import "media"; // Всегда в конце
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* /Reset default styles */
+
+
+/* Basic styles */
+
+* {
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    padding-top: 11px;
+    line-height: 1.75;
+    color: $light-font-color;
+    font-family: $default-font;
+    background-color: $body-color;
+    overflow-x: hidden;
+    opacity: 1;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* /Basic styles */
+
+@import "layout";
+@import "media";
+
+/* Всегда в конце */

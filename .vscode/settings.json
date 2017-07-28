@@ -1,0 +1,23 @@
+// Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию и пользовательские параметры.
+{   
+    "editor.detectIndentation": true,
+    "editor.tabSize": 2,
+    "editor.lineHeight": 0,
+    // Определяет, должны ли в редакторе отображаться направляющие отступа.
+    "editor.renderIndentGuides": true,
+    "editor.wrappingIndent": "indent",
+    "workbench.sideBar.location": "right",
+    "typescript.check.tscVersion": false,
+    "editor.fontSize": 14,
+    "colorHelper.pickerForm": "largePalette",
+    "workbench.iconTheme": "material-icon-theme",
+    "vsicons.projectDetection.autoReload": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\Sysnative\\cmd.exe",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Material",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
+    // Изменение размера шрифта в редакторе при нажатой клавише CTRL и движении колесика мыши
+    "editor.mouseWheelZoom": true
+}

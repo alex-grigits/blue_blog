@@ -1,38 +1,133 @@
+@import "fonts";
 @import "vars";
+@import "_mixins/clearfix";
 
-.site-header {
-  height: 175px;
-  background-color: #232A33;  
+/* header */
+
+.header {
+    @include clearfix;
+    background-color: #232A33;
 }
 
-.site-header__title {
-  margin-top: 35px;
+.header__logo,
+.header__search,
+.header__menu {
+    width: 33%;
 }
 
-.top-nav {
-  padding-top: 15px;
-  .top-nav__list {
+.header__logo {
+    float: left;
+}
+
+
+/* /header */
+
+/* header search */
+.header__search {
+    float: left;
+    //
+    border: 1px solid red;
+}
+
+.search {
+    position: relative;
+    //
+    border: 1px solid green;
+}
+
+.search__form {
+    //
+    border: 1px solid blueviolet;
+}
+
+.search__input {
+    padding: 4px 40px 4px 10px;
+    background-color: rgba(#fff, .1);
+    border: 0 none;
+    outline: none;
+    color: $light-font-color;
+    //
+    border: 1px solid goldenrod;
+}
+
+.search__submit {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: 0 none;
+    outline: none;
+    //
+    border: 1px solid greenyellow;
+}
+
+.icon-search {
+    width: 18px;
+    height: 18px;
+    position: abcolute;
+    right: 30px;
+    top: 0;
+    color: $light-font-color;
+}
+
+/* /header search */
+
+
+/* header menu */
+
+.header__menu {
+    width: 280px;
     float: right;
-    list-style-type: none;
-    .top-nav__item {
-      width: 280px;
-      padding: 2px 0 2px 10px;
-      background-color: #262E38;
-      border-bottom: 1px solid #232A33;
-      font-size: 12px;
-      color: #5B6062;      
-      &:last-of-type {
+}
+
+.menu__link {
+    display: block;
+    padding: 2px 0 2px 10px;
+    background-color: #262E38;
+    color: #5B6062;
+}
+
+.menu__item {
+    border-bottom: 1px solid #232A33;
+    &:last-child {
         border-bottom: none;
-      }
-      &:hover,
-      &:active {        
-        background-color: $body-color;
-        cursor: pointer;
-        a {
-          color: $light-font-color;
-          text-decoration: none;
-        }
-      }
     }
-  }
+}
+
+.menu__link:hover {
+    color: $light-font-color;
+    background-color: $body-color;
+}
+
+
+/* /Header menu */
+
+
+/* Wrapper */
+
+.wrapper {
+    min-height: 100%;
+}
+
+
+/* /Wrapper */
+
+
+/* site-content */
+
+.site-content {
+    padding-bottom: 80px;
+}
+
+
+/* /site-content */
+
+
+/* Footer */
+
+.footer {
+    position: relative;
+    margin-top: -80px;
+    height: 80px;
+    clear: both;
 }
