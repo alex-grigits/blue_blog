@@ -2,9 +2,11 @@
 @import "vars";
 @import "_mixins/clearfix";
 
-/* header */
+/*=== header ===*/
 
 .header {
+    height: 180px;
+    margin-top: 10px;
     @include clearfix;
     background-color: #232A33;
 }
@@ -17,67 +19,23 @@
 
 .header__logo {
     float: left;
+    height: 100%;
+    .logo__text {
+        margin: 0;
+        line-height: 180px;
+        color: #fff;
+    }
 }
 
+/*=== /header ===*/
 
-/* /header */
-
-/* header search */
-.header__search {
-    float: left;
-    //
-    border: 1px solid red;
-}
-
-.search {
-    position: relative;
-    //
-    border: 1px solid green;
-}
-
-.search__form {
-    //
-    border: 1px solid blueviolet;
-}
-
-.search__input {
-    padding: 4px 40px 4px 10px;
-    background-color: rgba(#fff, .1);
-    border: 0 none;
-    outline: none;
-    color: $light-font-color;
-    //
-    border: 1px solid goldenrod;
-}
-
-.search__submit {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background: transparent;
-    border: 0 none;
-    outline: none;
-    //
-    border: 1px solid greenyellow;
-}
-
-.icon-search {
-    width: 18px;
-    height: 18px;
-    position: abcolute;
-    right: 30px;
-    top: 0;
-    color: $light-font-color;
-}
-
-/* /header search */
-
-
-/* header menu */
+/*=== header menu ===*/
 
 .header__menu {
+    height: 100%;
     width: 280px;
     float: right;
+    padding-top: 25px;
 }
 
 .menu__link {
@@ -100,34 +58,133 @@
 }
 
 
-/* /Header menu */
+/*=== /Header menu ===*/
 
 
-/* Wrapper */
+/*=== Wrapper ===*/
 
 .wrapper {
     min-height: 100%;
 }
 
+/*=== /Wrapper ===*/
 
-/* /Wrapper */
-
-
-/* site-content */
-
-.site-content {
-    padding-bottom: 80px;
-}
-
-
-/* /site-content */
-
-
-/* Footer */
+/*=== Footer ===*/
 
 .footer {
     position: relative;
-    margin-top: -80px;
-    height: 80px;
+    margin-top: -70px;
+    height: 60px;
     clear: both;
+    background-color: #262E38;
+    text-align: center;
+    line-height: 60px;
 }
+
+/*=== /Footer ===*/
+
+/*===== site-content =====*/
+.site-content {
+    @include clearfix;
+    margin: 20px 0 90px 0;
+}
+/*==== blog-list ====*/
+.blog-list {
+    float: left;
+    width: 67%;
+    padding: 20px;
+    background-color: #ede9dc;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #000;
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.73), inset 4px -25px 41px -5px rgba(0,0,0,0.14);
+}
+
+/* blog-header__date */
+.blog-header__date {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+    border: 1px solid #30353a;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #fff;
+    background-color: #404953; 
+    font-size: 11px;
+    color: #5B6062;
+    text-align: center;
+    &:before {
+      position: absolute;      
+      content: "";
+      display: block;
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(to bottom, rgba(200,200,200,0.3) 0%, rgba(46,56,68,0.4) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#2e3844', GradientType=0 );
+    }
+    .date {
+        display: block;
+        margin: 0;
+        height: 25px;
+        line-height: 25px;
+        font-size: 15px;
+        color: #ede9dc;
+        
+    }
+    .month {
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 16px;
+        line-height: 16px;
+        background-color: #000;
+        opacity: 0.53;
+    }
+}
+
+.blog-header__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 20px;
+    .post-title {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        line-height: 24px;
+        color: #2d3844;
+    }
+    .post-title__author {
+        margin: 0;
+        padding: 0;
+        font-size: 11px;
+        line-height: 18px;
+        color: #a5a39a;
+    }
+}
+
+.blog-post {
+    padding-top: 20px;
+    color: #3b3a37;
+    font-size: 12;
+    line-height: 19px;
+    p {
+        margin-top: 0;
+    }
+    .cite {
+        float: right;
+        width: 208px;
+        padding: 20px 0;
+        margin: 15px 0 15px 15px;
+        border-top: 2px solid #8d9090;
+        border-bottom: 2px solid #8d9090;
+        text-align: center;
+        color: #2d3844;
+        font-size: 20px;
+        line-height: 24px;
+        font-style: italic;
+    }
+}
+/*==== /blog-list ====*/
+
+/*===== /site-content =====*/
